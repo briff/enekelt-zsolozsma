@@ -19,7 +19,12 @@
 
 % Page layout
 \usepackage[a5paper,margin=0.5in]{geometry}
-\pagestyle{empty}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\thepage}
+\fancyhead[LE]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 \setlength{\parindent}{0pt}
 
 % Title style
