@@ -27,7 +27,6 @@
 \NewDocumentEnvironment{psalmsheet}{O{}}{
   % Parse options
   \keys_set:nn { psalmsheet } { #1 }
-  \vskip\blockvskip
   \catcode`\_=12
   \catcode`\^=12
   \catcode`\$=12
@@ -45,7 +44,7 @@
       "\luaescapestring{\tl_use:N \g_psalmsheet_numeral_tl}"
     )
   }
-  \vskip\blockvskip
+  %\vskip\blockvskip
 }
 
 \keys_define:nn { psalmsheet } {

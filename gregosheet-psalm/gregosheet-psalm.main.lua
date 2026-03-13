@@ -26,16 +26,22 @@ local function get_word_syllable_counts(text)
   local syllables = gregosheet_psalm.syllabify_hungarian(text)
   local word_counts = {}
   local count = 0
+  local has_ant_marker = false
+  
   for _, syl in ipairs(syllables) do
     if syl == " " then
-      table.insert(word_counts, count)
-      count = 0
+      if count > 0 then
+        table.insert(word_counts, count)
+        count = 0
+      end
+    elseif type(syl) == "table" and syl.type == "marker" then
+      has_ant_marker = true
     else
       count = count + 1
     end
   end
   if count > 0 then table.insert(word_counts, count) end
-  return word_counts
+  return word_counts, has_ant_marker
 end
 
 function gregosheet_psalm.main(text, tone, initium, continuous, number, title, motto, numeral)
@@ -69,9 +75,9 @@ function gregosheet_psalm.main(text, tone, initium, continuous, number, title, m
       end
 
       if parts.flexa then
-        local counts = get_word_syllable_counts(parts.flexa)
+        local counts, has_ant = get_word_syllable_counts(parts.flexa)
         local underline, slash
-        if s_idx == 1 and i == 1 then
+        if (s_idx == 1 and i == 1) or has_ant then
           underline, slash = gregosheet_psalm.mark_flexa(counts, tone, true)
         else
           underline, slash = gregosheet_psalm.mark_flexa(counts, tone, initium)
@@ -80,9 +86,9 @@ function gregosheet_psalm.main(text, tone, initium, continuous, number, title, m
       end
 
       if parts.mediatio then
-        local counts = get_word_syllable_counts(parts.mediatio)
+        local counts, has_ant = get_word_syllable_counts(parts.mediatio)
         local underline, slash
-        if s_idx == 1 and i == 1 and not parts.flexa then
+        if (s_idx == 1 and i == 1 and not parts.flexa) or has_ant then
           underline, slash = gregosheet_psalm.mark_mediatio(counts, tone, true)
         else
           underline, slash = gregosheet_psalm.mark_mediatio(counts, tone, initium)

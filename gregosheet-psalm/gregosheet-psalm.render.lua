@@ -20,6 +20,11 @@ local function render_part(text, underline_indices, slash_idx)
   for i, syl in ipairs(syllables) do
     if syl == " " then
       tex.sprint(" ")
+    elseif type(syl) == "table" and syl.type == "marker" then
+      -- Render ANT. in bold without affecting syllable count
+      tex.sprint("\\textbf{")
+      tex.sprint(-2, syl.text)
+      tex.sprint("}")
     else
       syl_idx = syl_idx + 1
 
@@ -96,7 +101,7 @@ function gregosheet_psalm.render(sections_data, continuous, number, title, motto
     end
     tex.sprint("\\vskip\\blockvskip")
   end
-  
+
   -- Render numeral if provided
   if numeral and numeral ~= "" then
     tex.sprint("\\par\\noindent\\centering")
