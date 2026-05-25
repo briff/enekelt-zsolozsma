@@ -1,0 +1,3 @@
+[submodule "gregosheet"]
+	path = gregosheet
+	url = https://github.com/fay-ambrus/gregosheet.git
