@@ -1,4 +1,5 @@
 \documentclass[twoside]{article}
+\hfuzz=\maxdimen
 \usepackage[
     a5paper,
     margin=0.5in,
@@ -31,40 +32,42 @@
                     \addsheet[title={Imádságra hívás}]{ChristumDominumProNobis}
                     \addtext{R.br.(vas.)}
                     \addsheet[title={Reggeli dicséret}]{ChristeFiliDeiVivi}
-                    \addtext{R.br.(köznap)}
+                    \addtext{R.br.(köz.)}
                     \addsheet{IpseLiberabitMe}
-                    \addtext{Ant. (dél)}
+                    \addtext{Ant.(dél)}
                     \addsheet[title={Napközi imaóra}]{VivoEgoDicitDominus}
-                    \addtext{R.br.(köznap)}
+                    \addtext{R.br.(köz.)}
                     \addsheet[title={Esti dicséret}]{EgoDixi}
                 \end{gregosheet}
             \subsubsubsection{Nagyböjt II. hete}
                 \subsubsubsubsection{Péntek}
-                    \parttitle{Esti dicséret}
-                        \redtext{Magnificat}
-                            \printsheet{QuaerentesEumTenere}
+                    \begin{gregosheet}
+                        \addtext{M}
+                        \addsheet[title={Esti dicséret}]{QuaerentesEumTenere}
+                    \end{gregosheet}
                 \subsubsubsubsection{Szombat}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{Benedictus}
-                            \printsheet{VadamAdPatremMeum}
+                    \begin{gregosheet}
+                        \addtext{B}
+                        \addsheet[title={Reggeli dicséret}]{VadamAdPatremMeum}
+                    \end{gregosheet}
             \subsubsubsection{Nagyböjt III. hete}
                 \subsubsubsubsection{Vasárnap}
-                    \parttitle{I. Esti dicséret}
-                        \redtext{1. antifóna}
-                            \printsheet{ConvertiminiAdDominum}
-                        \redtext{2. antifóna}
-                            \printsheet{Sacrificabo}
-                        \redtext{3. antifóna}
-                            \printsheet{NemoTollitAMe}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{1. antifóna}
-                            \printsheet{RegnavitDominus}
-                        \redtext{2. antifóna}
-                            \printsheet{VimVirtutisSuae}
-                        \redtext{3. antifóna}
-                            \printsheet{RegesTerrae}
-                        \redtext{Benedictus (A év)}
-                            \printsheet{Aqua}
+                    \begin{gregosheet}
+                        \addtext{1}
+                        \addsheet[title={I. Esti dicséret}]{ConvertiminiAdDominum}
+                        \addtext{2}
+                        \addsheet{Sacrificabo}
+                        \addtext{3}
+                        \addsheet{NemoTollitAMe}
+                        \addtext{1}
+                        \addsheet[title={Reggeli dicséret}]{RegnavitDominus}
+                        \addtext{2}
+                        \addsheet{VimVirtutisSuae}
+                        \addtext{3}
+                        \addsheet{RegesTerrae}
+                        \addtext{B(A)}
+                        \addsheet{Aqua}
+                    \end{gregosheet}
         \subsubsection*{b. Nagyhét (Nagycsütörtök Délutáni imaórájáig bezárólag)}
         \subsubsection*{c. Urunk szenvedésének és feltámadásának húsvéti szent háromnapja}
             \subsubsubsection{Nagycsütörtök}
@@ -82,143 +85,136 @@
     \subsection*{4. Húsvéti idő}
         \subsubsection*{b. Urunk mennybemeneteléig}
             \subsubsubsection{Minden nap}
-                \parttitle{Napközi imaóra}
-                    \redtext{Antifóna (délben)}
-                        \printsheet{AlleluiaTPSexta}                
+                \begin{gregosheet}
+                    \addtext{Ant.(dél)}
+                    \addsheet[title={Napközi imaóra}]{AlleluiaTPSexta}
+                \end{gregosheet}             
     \subsection*{5. Évközi idő}
         \subsubsection*{a. Vasánapokon}
             \subsubsubsection{Reggeli dicséret és II. Esti dicséret}
                 \subsubsubsubsection{XIV. vasárnap}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{Benedictus (A év)}
-                            \printsheet{ConfiteorTibiPater}
+                    \begin{gregosheet}
+                        \addtext{B(A)}
+                        \addsheet[title={Reggeli dicséret}]{ConfiteorTibiPater}
+                    \end{gregosheet}  
                 \subsubsubsubsection{XV. vasárnap}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{Benedictus (A év)}
-                            \printsheet{CumTurbaPlurima}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{Benedictus (C év)}
-                            \printsheet{HomoQuidam}
+                    \begin{gregosheet}
+                        \addtext{B(A)}
+                        \addsheet[title={Reggeli dicséret}]{CumTurbaPlurima}
+                        \addtext{B(C)}
+                        \addsheet{HomoQuidam}
+                    \end{gregosheet}
                 \subsubsubsubsection{XIX. vasárnap}
-                    \parttitle{Reggeli dicséret}
-                        \redtext{Benedictus (C év)}
-                            \printsheet{NoliteTimere}
+                    \begin{gregosheet}
+                        \addtext{B(C)}
+                        \addsheet[title={Reggeli dicséret}]{NoliteTimere}
+                    \end{gregosheet}
 \section*{II. A négy hétre osztott zsoltáros rész}
     \subsection*{I. hét}
         \subsubsection*{Vasárnap}
-            \parttitle{Imádságra hívás}
-                \printsheet{VeniteExsultemusDomino}
-            \parttitle{Olvasmányos imaóra}
-            \parttitle{Reggeli dicséret}
-                \redtext{Himnusz}
-                    \label{I/D/L/Hymn}
-                    \printsheet{AeterneRerumConditor}
-                \redtext{Rövid válaszos ének}
-                    \label{I/D/L/RespBrev}
-                    \printsheet{ChristiFiliDeiVivi}
-            \parttitle{Napközi imaóra}
-                \redtext{1. antifóna}
-                    \printsheet{BonumEst}
-                \redtext{2. antifóna}
-                    \printsheet{FortitudoMea}
-                \redtext{3. antifóna}
-                    \printsheet{Confitebor}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{VeniteExsultemusDomino}
+                \addtext{R.br.}
+                \addsheet[title={Reggeli dicséret}]{ChristiFiliDeiVivi}
+                \addtext{1}
+                \addsheet[title={Napközi imaóra}]{BonumEst}
+                \addtext{2}
+                \addsheet{FortitudoMea}
+                \addtext{3}
+                \addsheet{Confitebor}
+            \end{gregosheet}
         \subsubsection*{Hétfő}
-            \parttitle{Imádságra hívás}
-                \printsheet{IubilemusDeo}
-            \parttitle{Reggeli dicséret}
-                \redtext{Rövid válaszos ének}
-                    \label{I/fe2/L/RespBrev}
-                    \printsheet{BenedictusDominusASaeculo}
-                \redtext{Benedictus}
-                    \label{I/fe2/L/B}
-                    \printsheet{BenedictusDeus}
-            \parttitle{Napközi imaóra}
-                \redtext{1. antifóna}
-                    \printsheet{PraeceptumDomini}
-                \redtext{2. antifóna}
-                    \printsheet{DomineDeusMeusInTe}
-                \redtext{3. antifóna}
-                    \printsheet{DeusIudexIustus}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{IubilemusDeo}
+                \addtext{R.br.}
+                \addsheet[title={Reggeli dicséret}]{BenedictusDominusASaeculo}
+                \addtext{B}
+                \addsheet{BenedictusDeus}
+                \addtext{1}
+                \addsheet[title={Napközi imaóra}]{PraeceptumDomini}
+                \addtext{2}
+                \addsheet{DomineDeusMeusInTe}
+                \addtext{3}
+                \addsheet{DeusIudexIustus}
+            \end{gregosheet}
         \subsubsection*{Kedd}
-            \parttitle{Imádságra hívás}
-                \printsheet{RegemMagnum}
-            \parttitle{Reggeli dicséret}
-                \redtext{Himnusz}
-                    \label{I/fe3/L/Hymn}
-                    \printsheet{PergrataMundoNuntiat}
-                \redtext{Benedictus}
-                    \label{I/fe3/L/B}
-                    \printsheet{Erexit}
-            \parttitle{Napközi imaóra}
-                \redtext{1. antifóna}
-                    \printsheet{Beati}
-                \redtext{2. antifóna}
-                    \printsheet{CantaboDomino}
-                \redtext{3. antifóna}
-                    \printsheet{LaeteturIacob}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{RegemMagnum}
+                \addtext{H}
+                \addsheet[title={Reggeli dicséret}]{PergrataMundoNuntiat}
+                \addtext{B}
+                \addsheet{Erexit}
+                \addtext{1}
+                \addsheet[title={Napközi imaóra}]{Beati}
+                \addtext{2}
+                \addsheet{CantaboDomino}
+                \addtext{3}
+                \addsheet{LaeteturIacob}
+            \end{gregosheet}
         \subsubsection*{Szerda}
-            \parttitle{Imádságra hívás}
-                \printsheet{DominumQuiFecitNos}
-            \parttitle{Napközi imaóra}
-                \redtext{1. antifóna}
-                    \printsheet{InTotoCordeMeo}
-                \redtext{2. antifóna}
-                    \printsheet{InclinaDomine}
-                \redtext{3. antifóna}
-                    \printsheet{EgoAutem}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{DominumQuiFecitNos}
+                \addtext{1}
+                \addsheet[title={Napközi imaóra}]{InTotoCordeMeo}
+                \addtext{2}
+                \addsheet{InclinaDomine}
+                \addtext{3}
+                \addsheet{EgoAutem}
+            \end{gregosheet}
         \subsubsection*{Csütörtök}
-            \parttitle{Imádságra hívás}
-                \printsheet{AdoremusDominum}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{AdoremusDominum}
+            \end{gregosheet}
         \subsubsection*{Péntek}
-            \parttitle{Imádságra hívás}
-                \printsheet{DominumDeumNostrum}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{DominumDeumNostrum}
+            \end{gregosheet}
         \subsubsection*{Szombat}
-            \parttitle{Imádságra hívás}
-                \printsheet{PopulusDomini}
+            \begin{gregosheet}
+                \addsheet[title={Imádságra hívás}]{PopulusDomini}
+            \end{gregosheet}
     \subsection*{II. hét}
         \subsubsection*{Vasárnap}
-            \parttitle{Olvasmányos imaóra}
-                \redtext{Himnusz}
-                    \rubric{Amikor az imaórát éjszaka vagy kora hajnalban mondják:}
-                    \printsheet{MediaeNoctis}
-                \redtext{1. antifóna}
-                    \printsheet{Confessionem}
-                \redtext{2. antifóna}
-                    \printsheet{DomineDeusMeus}
-                \redtext{3. antifóna}
-                    \printsheet{QuamMagnificataSuntE}
-            \parttitle{Reggeli dicséret}
-                \redtext{1. antifóna}
-                    \printsheet{DominusMihiAdiutor}
-                \redtext{2. antifóna}
-                    \printsheet{TresExUno}
-                \redtext{3. antifóna}
-                    \printsheet{LaudateDominum}
-                \redtext{Rövid válaszos ének}
-                    \printsheet{ConfitebimurTibiDeus}
+            \begin{gregosheet}
+                \addtext{H(éj.)}
+                \addsheet[title={Olvasmányos imaóra}]{MediaeNoctis}
+                \addtext{1}
+                \addsheet{Confessionem}
+                \addtext{2}
+                \addsheet{DomineDeusMeus}
+                \addtext{3}
+                \addsheet{QuamMagnificataSuntE}
+                \addtext{1}
+                \addsheet[title={Reggeli dicséret}]{DominusMihiAdiutor}
+                \addtext{2}
+                \addsheet{TresExUno}
+                \addtext{3}
+                \addsheet{LaudateDominum}
+                \addtext{R.br.}
+                \addsheet{ConfitebimurTibiDeus}
+            \end{gregosheet}
         \subsection*{Hétfő}
-            \parttitle{Olvasmányos imaóra}
-                \redtext{Himnusz}
-                    \rubric{Amikor az imaórát éjszaka vagy kora hajnalban mondják:}
-                    \printsheet{IpsumNuncNobis}
-                \redtext{1. antifóna}
-                    \printsheet{InTuaIustitia}
-                \redtext{2. antifóna}
-                    \printsheet{FaciemTuam}
-                \redtext{3. antifóna}
-                    \printsheet{DiligiteDominum}
-            \parttitle{Reggeli dicséret}
-                \redtext{1. antifóna}
-                    \printsheet{Sitivit}
-                \redtext{2. antifóna}
-                    \printsheet{Ostende}
-                \redtext{3. antifóna}
-                    \printsheet{Opera}
-                \redtext{Rövid válaszos ének}
-                    \printsheet{ExultateIustiInDomino}
-                \redtext{Benedictus}
-                    \printsheet{BenedictusDominusQuia}
+            \begin{gregosheet}
+                \addtext{H(éj.)}
+                \addsheet[title={Olvasmányos imaóra}]{IpsumNuncNobis}
+                \addtext{1}
+                \addsheet{InTuaIustitia}
+                \addtext{2}
+                \addsheet{FaciemTuam}
+                \addtext{3}
+                \addsheet{DiligiteDominum}
+                \addtext{1}
+                \addsheet[title={Reggeli dicséret}]{Sitivit}
+                \addtext{2}
+                \addsheet{Ostende}
+                \addtext{3}
+                \addsheet{Opera}
+                \addtext{R.br.}
+                \addsheet{ExultateIustiInDomino}
+                \addtext{B}
+                \addsheet{BenedictusDominusQuia}
+            \end{gregosheet}
+
         \subsection*{Kedd}
             \parttitle{Olvasmányos imaóra}
                 \redtext{1. antifóna}
