@@ -105,3 +105,8 @@ latex.out/
 preview.tex
 
 STEERING.md
+
+out/
+tmp-ly/
+_aretino/
+*pdf
