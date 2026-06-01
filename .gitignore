@@ -105,6 +105,7 @@ latex.out/
 preview.tex
 
 STEERING.md
+*.DS_Store
 
 out/
 tmp-ly/
