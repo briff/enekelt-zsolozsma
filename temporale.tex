@@ -4,6 +4,7 @@
     a5paper,
     margin=0.5in,
     includehead,
+    bindingoffset=0.2in,
     headsep=4pt,
     headheight=13pt
 ]{geometry}
@@ -21,6 +22,7 @@
 \subtitle{\the\year. \the\month.}
 
 \begin{document}
+\maketitle
 \section*{I. Időszaki rész}
     \markboth{Időszaki rész}{Nagyböjt}
     \subsection*{3. Nagyböjt}
@@ -122,5 +124,12 @@
                     \addsheet[title={Reggeli dicséret}]{AngelorumEsca}
                     \addtext{Ant.(déle.)}
                     \addsheet[title={Napközi imaóra}]{Desiderio}
+                \end{gregosheet}
+\subsubsubsection{Jézus szent szíve}
+                \begin{gregosheet}
+                    \addtext{2}
+                    \addsheet[title={Reggeli dicséret}]{VeniteAdMe}
+                    \addtext{Ant.(déle)}
+                    \addsheet[title={Napközi imaóra}]{PopuleMeus}
                 \end{gregosheet}
 \end{document}

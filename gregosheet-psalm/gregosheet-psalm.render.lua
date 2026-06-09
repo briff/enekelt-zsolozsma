@@ -61,11 +61,11 @@ end
 
 function gregosheet_psalm.render(sections_data, continuous, number, title, motto, numeral)
   if number and number ~= "" then
-    tex.sprint("\\par\\noindent\\centering")
+    tex.sprint("\\par\\noindent{\\centering")
     tex.sprint("\\fontsize{\\psalmfontsize}{12}\\selectfont\\psalmfont")
     tex.sprint("\\textcolor{red}{")
     tex.sprint(-2, number)
-    tex.sprint("}")
+    tex.sprint("}\\par}")
     tex.sprint("\\vskip0.5\\blockvskip")
   end
 
