@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fc-query /home/bertalan/prog/ambzsol/guidohu_.ttf)",
+      "Read(//usr/local/texlive/**)",
+      "Bash(rm -f .DS_Store)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
